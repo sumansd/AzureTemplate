@@ -167,7 +167,7 @@
         }
         #forgotPassword{
                 color: #cb1f08 !important;
-                margin-top: 2% !important;
+               
             }
 
             a:hover { text-decoration: none; }
@@ -749,7 +749,7 @@
             /* width: 277%; */
             flex: 0.7;
         }
-
+    
         .unified_container .row .panel-default2 {
             margin-top: auto;
             margin-bottom: auto;
@@ -920,25 +920,38 @@
         }
 
         .unified_container .row .panel-default #api .localAccount .entry .entry-item {
-            position: relative !important;
+            position: relative;
             width: 100%;
             padding-top: 6px;
             padding-bottom: 6px;
-            display: block
+            display: block;
+
         }
+        .entry-item:nth-child(2){
+            -webkit-transform: scaleY(-1);
+         transform: scaleY(-1);
+        }
+        .entry-item:nth-child(2)> div{
+            -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+      text-align: left;
+      margin-bottom: 4%;
+    margin-left: -6%;        }
+        .entry-item:nth-child(2)> input{
+            -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+        }
+
 
         .unified_container .row .panel-default #api .localAccount .entry .entry-item label {
             display: none !important;
+            
         }
 label{
-    display: none !important;
-}
-.password-label{
-    text-align: left !important;
-    margin-left: 3em !important;
-    margin-top: 5% !important;
+    visibility: hidden !important;
 }
         .unified_container .row .panel-default #api .localAccount .entry .entry-item input {
+            
             outline: 0;
             background-color: #fff !important;
             background-image: none !important;
@@ -968,7 +981,8 @@ label{
             text-align: left;
             height: 0;
             left: 0;
-            width: 100%
+            width: 100%;
+
         }
 
         @keyframes slideInFromLeft {
@@ -988,8 +1002,7 @@ label{
         }
 
         .unified_container .row .panel-default #api .localAccount .entry .entry-item .password-label #forgotPassword {
-
-            position: absolute;
+            -webkit-transform: scaleY(-1);
             right: 0;
             bottom: 0;
             clear: right;
@@ -1142,7 +1155,7 @@ label{
             }
 
             .unified_container .row .panel-default .panel-body #api .localAccount .entry .entry-item {
-                display: block;
+                display: flex;
                 width: 100%;
                 margin-bottom: 10px
             }
@@ -1214,7 +1227,7 @@ label{
                         #004082'>
                             Wel<hi style="color: #efcc55;">come!</hi>
                         </h1> -->
-                        <img src="https://stg-ng-api-conn-uploads.s3.ap-southeast-2.amazonaws.com/auth_pages/NeuroLogo.png" style="height:12%; width: 50%;" />
+                        <img src="https://stg-ng-api-conn-uploads.s3.ap-southeast-2.amazonaws.com/auth_pages/NeuroLogo.png" style="height:12%; width: 40%;" />
                         <p style="color: #525252;">Please login to proceed</p>
                         <div id="api" role="main">
                             <form id="localAccountForm" action="JavaScript:void(0);" class="localAccount" aria-label="Sign in with your email address">
@@ -1237,16 +1250,15 @@ label{
                                     <input type="email" id="email" name="Email Address" title="Please enter a valid Email Address" pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" autofocus="" placeholder="Email Address" aria-label="Email Address">
                                   </div>
                                     <div class="entry-item">
+                                      <div class="password-label">
+                                        <label for="password">Password</label>
+                                            <a id="forgotPassword" href="/8ec8d81b-2b8c-493e-a9bd-40629f7a51df/B2C_1_signin_dashboard/api/CombinedSigninAndSignup/forgotPassword?csrf_token=RklBdjZ4VEs1Z1VJTU4yTUVnNEhxMC9yYVB0RmdWcExZMmdsb05qVWprU3pncHBLUGVHb3UvVzhsaThVUjNmclRubExvRnJxa3RMNkJZWjhObDFjRGc9PTsyMDIyLTEwLTEwVDA3OjE2OjQ2LjU4MzJaO090NjJZbUhrMW5MM0NWTHA4VDBDNlE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiIwZTNiZTY0NS0xYWI3LTQ5NDItYWE1Yi0wOTU1ZjYyMmQ1NjkifQ&amp;p=B2C_1_signin_dashboard">Forgot your password?</a>
+                                                      </div>
                                       <div class="error itemLevel" aria-hidden="true" style="display: none;">
                                         <p role="alert"></p>
                                       </div>
                                       <input type="password" id="password" name="Password" placeholder="Password" aria-label="Password" autocomplete="current-password" aria-required="true">
                                                   </div>
-                                                  <div class="password-label">
-                                                    <label for="password">Password</label>
-                                                        <a id="forgotPassword" href="/8ec8d81b-2b8c-493e-a9bd-40629f7a51df/B2C_1_signin_dashboard/api/CombinedSigninAndSignup/forgotPassword?csrf_token=RklBdjZ4VEs1Z1VJTU4yTUVnNEhxMC9yYVB0RmdWcExZMmdsb05qVWprU3pncHBLUGVHb3UvVzhsaThVUjNmclRubExvRnJxa3RMNkJZWjhObDFjRGc9PTsyMDIyLTEwLTEwVDA3OjE2OjQ2LjU4MzJaO090NjJZbUhrMW5MM0NWTHA4VDBDNlE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiIwZTNiZTY0NS0xYWI3LTQ5NDItYWE1Yi0wOTU1ZjYyMmQ1NjkifQ&amp;p=B2C_1_signin_dashboard">Forgot your password?</a>
-                                                                  </div>
-            
                                   <div class="working"></div>
                         
                         
