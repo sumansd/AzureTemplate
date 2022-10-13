@@ -22,14 +22,16 @@
             src: url(https://ngnuvance.b2clogin.com/static/tenant/templates/fonts/segoeui_bold.WOFF);
             font-weight: bold;
         }
-        input{
-                width:80% !important;
-                 height: 8vh !important; 
-                                  border: none !important; 
-                 border-bottom: #707070 1px solid !important;
-background-color: transparent !important;
-            
-            }
+
+        input {
+            width: 80% !important;
+            height: 8vh !important;
+            border: none !important;
+            border-bottom: #707070 1px solid !important;
+            background-color: transparent !important;
+            outline: none !important;
+
+        }
 
         #AmazonExchange {
             background-image: url(https://ngnuvance.b2clogin.com/static/tenant/templates/idp_logos/colored/amazon.svg);
@@ -159,7 +161,7 @@ background-color: transparent !important;
         body {
             font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
             background-attachment: fixed;
-            background-color:#f7f7f7 !important;
+            background-color: #f7f7f7 !important;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -214,7 +216,8 @@ background-color: transparent !important;
         #api {
             margin: 0 auto
         }
-        .heading{
+
+        .heading {
             visibility: hidden !important;
         }
 
@@ -339,7 +342,6 @@ background-color: transparent !important;
             background-color: #1662c7;
             border-color: #204d74;
             border-radius: 2rem
-
         }
 
         .buttons button[aria-disabled=true] {
@@ -365,9 +367,11 @@ background-color: transparent !important;
             box-shadow: none;
             text-align: left
         }
-.attrEntry{
-    box-shadow: none!important;
-}
+
+        .attrEntry {
+            box-shadow: none !important;
+        }
+
         .buttons #cancel:hover {
             color: #000 !important
         }
@@ -1091,8 +1095,10 @@ background-color: transparent !important;
         }
 
         /* endinject */
-        .headings{
-            font-size: 10px; color: #0067b1; margin-top: 3vh;
+        .headings {
+            font-size: 10px;
+            color: #0067b1;
+            margin-top: 3vh;
         }
     </style>
 
@@ -1100,7 +1106,7 @@ background-color: transparent !important;
 
 <body>
     <div id="background_branding_container" data-tenant-branding-background-color="true">
-      
+
     </div>
     <div class="container  self_asserted_container " role="presentation">
         <div class="row">
@@ -1111,10 +1117,11 @@ background-color: transparent !important;
                             <h1 role="headings">Change Password</h1>
                         </div>
 
-                        <p >Please change your password so you can 
-                            </p>
-                            <p>keep your account safe.</p>
+                        <p>Please change your password so you can
+                        </p>
+                        <p>keep your account safe.</p>
                         <div id="api" data-name="SelfAsserted" role="main">
+
                         </div>
                     </div>
                 </div>
@@ -1122,4 +1129,5 @@ background-color: transparent !important;
         </div>
     </div>
 </body>
+
 </html>
