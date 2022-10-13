@@ -49,10 +49,9 @@
         input{
                 width:80% !important;
                  height: 8vh !important; 
-                                  border: none !important; 
+                 border: none !important; 
                  border-bottom: #707070 1px solid !important;
-
-            
+                outline: none;            
             }
 
         #AppleExchange,
@@ -168,10 +167,10 @@
         }
         #forgotPassword{
                 color: #cb1f08 !important;
-                position: absolute;
-                top: 80%;
-                right: 10%;
+                margin-top: 2% !important;
             }
+
+            a:hover { text-decoration: none; }
 
         .container {
             text-align: center;
@@ -327,8 +326,8 @@
         }
 
         .buttons {
-            text-align: center !important
-
+            text-align: center !important;
+            margin-top: 5vh ;
         }
 
         .buttons button {
@@ -921,7 +920,7 @@
         }
 
         .unified_container .row .panel-default #api .localAccount .entry .entry-item {
-            position: relative;
+            position: relative !important;
             width: 100%;
             padding-top: 6px;
             padding-bottom: 6px;
@@ -932,7 +931,12 @@
             display: none !important;
         }
 label{
-    visibility: hidden !important;
+    display: none !important;
+}
+.password-label{
+    text-align: left !important;
+    margin-left: 3em !important;
+    margin-top: 5% !important;
 }
         .unified_container .row .panel-default #api .localAccount .entry .entry-item input {
             outline: 0;
@@ -1202,14 +1206,15 @@ label{
         <div class="row">
             <div class="col-lg-6">
                 <div class="panel panel-default">
-                    <img src="https://stg-ng-api-conn-uploads.s3.ap-southeast-2.amazonaws.com/social/azure_login.jpg" style="height:100%; width: 100%;" />
+                    <img src="https://stg-ng-api-conn-uploads.s3.ap-southeast-2.amazonaws.com/auth_pages/azure_login.jpg" style="height:100%; width: 100%;" />
                 </div>
                 <div class="panel panel-default2">
                     <div style="flex: 3; flex-direction: column;">
-                        <h1 data-aos-duration="3000" data-aos="fade-up" className="h1" style='color: 
+                        <!-- <h1 data-aos-duration="3000" data-aos="fade-up" className="h1" style='color: 
                         #004082'>
                             Wel<hi style="color: #efcc55;">come!</hi>
-                        </h1>
+                        </h1> -->
+                        <img src="https://stg-ng-api-conn-uploads.s3.ap-southeast-2.amazonaws.com/auth_pages/NeuroLogo.png" style="height:12%; width: 50%;" />
                         <p style="color: #525252;">Please login to proceed</p>
                         <div id="api" role="main">
                             <form id="localAccountForm" action="JavaScript:void(0);" class="localAccount" aria-label="Sign in with your email address">
@@ -1232,15 +1237,16 @@ label{
                                     <input type="email" id="email" name="Email Address" title="Please enter a valid Email Address" pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" autofocus="" placeholder="Email Address" aria-label="Email Address">
                                   </div>
                                     <div class="entry-item">
-                                      <div class="password-label">
-                                        <label for="password">Password</label>
-                                            <a id="forgotPassword" href="/8ec8d81b-2b8c-493e-a9bd-40629f7a51df/B2C_1_signin_dashboard/api/CombinedSigninAndSignup/forgotPassword?csrf_token=RklBdjZ4VEs1Z1VJTU4yTUVnNEhxMC9yYVB0RmdWcExZMmdsb05qVWprU3pncHBLUGVHb3UvVzhsaThVUjNmclRubExvRnJxa3RMNkJZWjhObDFjRGc9PTsyMDIyLTEwLTEwVDA3OjE2OjQ2LjU4MzJaO090NjJZbUhrMW5MM0NWTHA4VDBDNlE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiIwZTNiZTY0NS0xYWI3LTQ5NDItYWE1Yi0wOTU1ZjYyMmQ1NjkifQ&amp;p=B2C_1_signin_dashboard">Forgot your password?</a>
-                                                      </div>
                                       <div class="error itemLevel" aria-hidden="true" style="display: none;">
                                         <p role="alert"></p>
                                       </div>
                                       <input type="password" id="password" name="Password" placeholder="Password" aria-label="Password" autocomplete="current-password" aria-required="true">
                                                   </div>
+                                                  <div class="password-label">
+                                                    <label for="password">Password</label>
+                                                        <a id="forgotPassword" href="/8ec8d81b-2b8c-493e-a9bd-40629f7a51df/B2C_1_signin_dashboard/api/CombinedSigninAndSignup/forgotPassword?csrf_token=RklBdjZ4VEs1Z1VJTU4yTUVnNEhxMC9yYVB0RmdWcExZMmdsb05qVWprU3pncHBLUGVHb3UvVzhsaThVUjNmclRubExvRnJxa3RMNkJZWjhObDFjRGc9PTsyMDIyLTEwLTEwVDA3OjE2OjQ2LjU4MzJaO090NjJZbUhrMW5MM0NWTHA4VDBDNlE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiIwZTNiZTY0NS0xYWI3LTQ5NDItYWE1Yi0wOTU1ZjYyMmQ1NjkifQ&amp;p=B2C_1_signin_dashboard">Forgot your password?</a>
+                                                                  </div>
+            
                                   <div class="working"></div>
                         
                         
