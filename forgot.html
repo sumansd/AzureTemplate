@@ -1104,8 +1104,8 @@
             margin-top: 3vh;
         }
     </style>
-       
-    
+
+
 </head>
 
 <body>
@@ -1124,16 +1124,7 @@
                         <p>Please enter your registered</p>
                         <p>email address.</p>
                         <div id="api" data-name="SelfAsserted" role="main">
-                            <div class="heading">
-                              <h1 role="heading">User Details</h1>
-                            </div>
-                          <div class="buttons">
-                          </div>
-                          <div class="intro">
-                            <p>Please provide the following details.</p>
-                          </div>
-                          
-                        </div>
+                             </div>
                     </div>
                 </div>
             </div>
@@ -1141,15 +1132,20 @@
     </div>
 </body>
 <script>
-    if (
-      (document.documentElement.textContent || document.documentElement.innerText).indexOf('Verify code') > -1
-    ) {
-       let cbotton = document.getElementById("continue")
-       cbotton.style.display = "none"
-       }
-       else{
-        let cbotton = document.getElementById("continue")
-       cbotton.style.display = "block"
-       }
-        </script>
+    let continuebotton = document.getElementById("continue")
+    function Trigger() {
+        if ((document.documentElement.textContent || document.documentElement.innerText).indexOf('Verify code') > -1) {
+            continuebotton.style.display = "none"
+        } else {
+
+            continuebotton.style.display = "block"
+
+        }
+
+    }
+
+    let interval = setInterval(Trigger, 1000);
+
+</script>
+
 </html>
