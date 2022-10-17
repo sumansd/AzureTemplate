@@ -1134,6 +1134,7 @@
 <script>
     let continuebotton = document.getElementById("continue")
     function Trigger() {
+        console.log(document.getElementById("emailVerificationControl_but_verify_code"))
         if ((document.documentElement.textContent || document.documentElement.innerText).indexOf('Verify code') > -1) {
             continuebotton.style.display = "none"
         } else {
